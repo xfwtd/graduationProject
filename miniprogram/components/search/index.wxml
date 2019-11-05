@@ -1,0 +1,4 @@
+<!--components/search/index.wxml-->
+<navigator url="/pages/search/index" class="search-class" >
+  <view>{{placestr}}</view>
+</navigator>

@@ -1,0 +1,181 @@
+/* pages/placeBook/index.wxss */
+
+/* components/scrollNav/index.wxss */
+
+.bg-white {
+    background: white;
+    white-space: nowrap;
+    position: fixed;
+    z-index: 9999;
+}
+
+.flex-a {
+    border-bottom: 2rpx solid #e5e5e5;
+}
+
+.daybox {
+    display: inline-block;
+    width: 150rpx;
+    height: 110rpx;
+    padding-top: 20rpx;
+    text-align: center;
+    border-right: 2rpx solid #e5e5e5;
+    position: relative;
+    bottom: -2rpx;
+}
+
+.text-orange {
+    border-bottom: 2rpx solid #3484FD;
+    color: #3484FD;
+}
+
+
+
+.small {
+    font-size: 24rpx;
+    display: inline-block;
+}
+
+.wrap {
+    background-color: #fff;
+}
+
+.site {
+    position: relative;
+    min-height: 1600rpx;
+}
+
+.site-name-box {
+    margin-left: 140rpx
+}
+
+.site-name {
+    width: 140rpx;
+    text-align: center;
+    display: inline-block;
+    font-size: 24rpx;
+    height: 50rpx;
+    color: #ccc;
+}
+
+
+.scroll-time {
+    position: absolute;
+    left: 0;
+    top: 36rpx;
+}
+.site-time {
+    width: 100rpx;
+    height: 120rpx;
+    text-align: right;
+    font-size: 24rpx;
+    color: #ccc;
+    margin-top: -2rpx;
+}
+
+.seat-map {
+    margin-left: 140rpx;
+    /* border: 2rpx solid #ccc; */
+    font-size: 0;
+}
+
+.seat {
+    width: 140rpx;
+    height: 120rpx;
+    text-align:center;
+    line-height: 120rpx;
+    background-color: #fff;
+    display: inline-block;
+    /* border-right:2rpx solid #ccc;
+    border-bottom:2rpx solid #ccc; */
+    border:2rpx solid #ccc; 
+    box-sizing: border-box;
+    margin-top: -4rpx;
+    margin-left: -2rpx;
+    overflow: hidden;
+    font-size: 28rpx;
+}
+
+.on {
+    background-color: #3484FD;
+    color: #fff;
+}
+
+.off {
+    background-color: #e5e5e5;
+}
+
+
+.instructions {
+    position: fixed;
+    bottom: 120rpx;
+    display: flex;
+    flex-direction: row;
+    height: 120rpx;
+    background-color: #fff;
+    z-index: 999;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 2rpx solid #ccc; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.instructions .type-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructions .block {
+    flex:1;
+    width: 100rpx;
+    height: 40rpx;
+    border: 2rpx solid #e5e5e5;
+    margin-bottom: 10rpx;
+ 
+}
+
+.instructions .text {
+    width: auto;
+    font-size: 24rpx;
+} 
+
+.instructions .act {
+    background-color: #3484FD;
+}
+
+.instructions .ban {
+    background-color: #ccc;
+}
+
+.book-bottom {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    height: 120rpx;
+    background-color: #fff;
+    z-index: 999;
+    width: 100%;
+    line-height: 120rpx;
+    box-sizing: border-box;
+    border-top: 2rpx solid #ccc; 
+}
+
+.book-bottom .price {
+    flex: 3;
+    padding-left: 20rpx;
+    font-size: 40rpx;
+    color: #f8e71c;
+}
+
+.book-bottom .btn {
+    flex:2;
+    background-color: #3484FD;
+    color:#fff;
+    text-align: center;
+    font-size: 32rpx;
+}

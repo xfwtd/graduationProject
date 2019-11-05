@@ -1,0 +1,5 @@
+<!--components/classif/index.wxml-->
+<view class="classif">
+  <image src="{{classifImg}}" class="img"></image>
+  <text class="name">{{classifName}}</text>
+</view>

@@ -1,0 +1,56 @@
+<!--pages/orderDetail/index.wxml-->
+<topbar-cmp placeName="" bind:topbarHeight="topbar"></topbar-cmp>
+
+<view class="container" style="margin-top: {{topbarHeight}}px">
+
+        <view class="page-title">
+            订单详情
+        </view>
+        <view class="cu-form-group">
+                <view class="title">手机号码</view>
+                <input type="number" placeholder="请输入手机号" auto-focus="true"></input>
+        </view>
+        <view class="message">
+            *该号码用于接受商家发送的订单信息
+        </view>
+        <view class="content">
+            <image class="place-img" src="../../images/place1.jpg">
+                
+            </image>
+            <view class="detail">
+                <view class="place-name">
+                    这是店名
+                </view>
+                <view class="pos">
+                    这是一个地址
+                </view>
+            </view>
+        </view>
+
+        <view class="order">
+            <view class="order-time">
+                10月1日 周五
+            </view>
+            <view class="total" wx:for="{{2}}">
+                1号场 10：00-11：00 ￥36
+            </view>
+        </view>
+
+        <view class="price-box">
+            <view class="title">
+                订单总价
+            </view>
+            <view class="price">
+                ￥72
+            </view>
+        </view>
+
+        <view class="book-bottom">
+                <view class="price">
+                    <view class="small">合计:</view>￥{{total}}
+                </view>
+                <navigator class="btn" target="" url="">
+                   立即下单
+                </navigator>
+            </view>
+</view>

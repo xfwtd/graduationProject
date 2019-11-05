@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "pos-cmp":"/components/mainPosition/index"
+  }
+}

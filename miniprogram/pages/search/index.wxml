@@ -1,0 +1,31 @@
+<!--pages/search/index.wxml-->
+<view class="top-search">
+    <view class="search-box">
+        <text class="cuIcon-search text-grey"></text>
+        <input type="text" auto-focus="true" placeholder="在这里搜索" class="input-box" bindconfirm="search" value="{{inputValue}}"></input>
+        <text class="cuIcon-roundclosefill text-grey" bindtap="cancel" wx:if="{{searching}}"></text>
+    </view>
+    <view class="" bindtap="back">
+        取消
+    </view>
+</view>
+
+<view class="his-box" wx-if="{{!searching}}">
+    <view class="his">
+        历史记录
+    </view>
+    <block wx:for="{{his}}" wx:if="{{his[0]}}">
+        <view class="tag">
+            {{item}}
+        </view>
+    </block>
+    <view class="" wx:if="{{!his[0]}}">
+        还没搜索过哦
+    </view>
+</view>
+
+<view class="" wx-if="{{searching}}">
+    <block wx:for="{{placeData}}" wx:key="pid">
+        <place-cmp placeData="{{item}}"></place-cmp>
+      </block>
+</view>

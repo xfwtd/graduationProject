@@ -1,0 +1,5 @@
+/* components/rate/index.wxss */
+.rate {
+	display: flex;
+	flex-direction: row;
+}

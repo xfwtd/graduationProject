@@ -1,0 +1,10 @@
+<!--components/topbar/index.wxml-->
+<view class="custom" hover-class="none" hover-stop-propagation="false">
+    <view class="statu" style="height: {{statusBarHeight}}px">
+
+    </view>
+    <view class="topbar" style="height:{{topbarHeight}}px">
+        <image class="" src="../images/back.png" bindtap="back"></image>
+        <text class="title" bindtap="back">{{placeName}}</text>
+    </view>
+</view>

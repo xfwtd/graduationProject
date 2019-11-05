@@ -1,0 +1,44 @@
+<!--pages/index/index.wxml-->
+<view class="container" wx>
+  <view class="topbar">
+    <pos-cmp bindtap="bdmap" pos-class="main" location="{{locationString}}"></pos-cmp>
+    <search-cmp style="flex:1"></search-cmp>
+  </view>
+  <!-- 轮播图 -->
+  <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true"
+    autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3"
+    indicator-active-color="#0081ff">
+    <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+      <view class="swiper-item">
+        <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+        <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover"
+          wx:if="{{item.type=='video'}}"></video>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <!-- 热门分类 -->
+  <view class="padding">
+    <view class="contentbox">
+      <text class="title">热门分类</text>
+      <view class="classifBar">
+        <block wx:for="{{classifData}}">
+          <classif-cmp classifName="{{item.classifName}}" classifImg="{{item.classifImg}}"></classif-cmp>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <!-- 场馆推荐 -->
+  <view class="padding">
+    <view class="contentbox">
+      <text class="title">场馆推荐</text>
+      <view class="placeList">
+        <block wx:for="{{placeData}}" wx:key="pid">
+          <place-cmp placeData="{{item}}"></place-cmp>
+        </block>
+      </view>
+    </view>
+  </view>
+
+</view>

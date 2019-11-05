@@ -1,0 +1,13 @@
+/* components/search/index.wxss */
+.search-class {
+  background-color: #fff;
+  border: 2rpx solid #ccc;
+  color: #ccc;
+  height: 56rpx;
+  border-radius: 50rpx;
+  margin: 0 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}

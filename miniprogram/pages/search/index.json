@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "place-cmp":"/components/place/index"
+  },
+  "navigationBarTitleText": "搜索"
+}

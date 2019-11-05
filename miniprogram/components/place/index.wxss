@@ -1,0 +1,79 @@
+/* components/place/index.wxss */
+
+.placeBox {
+  display: flex;
+  padding: 20rpx 30rpx;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.placeImg {
+  width: 200rpx;
+  height: 160rpx;
+  margin-right: 20rpx;
+}
+
+.contentBox {
+  flex: 1;
+}
+
+.title {
+  font-size: 32rpx;
+}
+
+.position {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0 10rpx 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 24rpx;
+}
+
+.img-pos {
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+}
+
+.text {
+  color: #ccc;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  /* padding: 0 20rpx; */
+}
+
+.distance {
+  color: #ccc;
+  font-size: 24rpx;
+}
+
+.priceBox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10rpx;
+}
+
+.star {
+  text-align: center;
+  width: 80rpx;
+  padding: 5rpx;
+  border-radius: 10rpx;
+  color: #f8e71c;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, .4);
+  font-size: 28rpx;
+}
+
+.price {
+  color: #ccc;
+  font-size: 24rpx;
+}
+
+.price .em{
+  color: #1D61D4;
+  font-size: 28rpx;
+  font-weight: bold;
+}

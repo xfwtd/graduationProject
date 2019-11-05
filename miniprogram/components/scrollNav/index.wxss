@@ -1,0 +1,21 @@
+/* components/scrollNav/index.wxss */
+.bg-white {
+    background: white;
+
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.cu-item {
+    flex: 1;
+    text-align: center;
+    padding: 30rpx 0;
+}
+
+.text-orange {
+    border-bottom: 4rpx solid #3484FD;
+    color: #3484FD;
+}

@@ -1,0 +1,6 @@
+<!--components/position/index.wxml-->
+<view class="pos-class center">
+  <image class="img-pos" src="{{posImg}}"></image>
+  <text class="text">{{location}}</text>
+</view>
+

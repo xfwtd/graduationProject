@@ -1,0 +1,33 @@
+<!--pages/location/index.wxml-->
+
+    
+
+<view class="top">
+    当前：{{locating}}
+</view>
+<scroll-view class="scroll" scroll-y="true" scroll-into-view="{{scrollId}}">
+    <view class="item">
+        <view class="pos-title">定位</view>
+        <view class="hot">
+            {{locationString}}
+        </view>
+    </view>
+
+    <view class="" wx:for="{{cityData}}" id="{{item.fon}}" catchtap="selcity">
+        <view class="title">
+            {{item.fon}}
+        </view>
+        <view class="{{index==0?'citys':'citys-box'}}">
+            <view class="city" wx:for="{{item.citys}}" wx:for-item="itm" wx:key data-set="{{itm}}">
+                {{itm}}
+            </view>
+        </view>
+    </view>
+    <view class="" style="margin-bottom:20rpx">
+
+    </view>
+</scroll-view>
+<view class="slibar" catchtap="scrollTo">
+    <view wx:for="{{['A','B','C','D','E','F','G','H','J','K','L','M','P','Q','R','S','T','W','X','Y','Z']}}"
+        class="letter" data-to="{{item}}">{{item}}</view>
+</view>

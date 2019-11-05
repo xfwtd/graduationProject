@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "topbar-cmp":"/components/topbar/index"
+  },
+  "navigationStyle": "custom"
+
+}

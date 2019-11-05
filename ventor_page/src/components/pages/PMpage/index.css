@@ -1,0 +1,19 @@
+.container {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+
+    background-color: #f5f5f5;
+}
+
+.com-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.func-btn {
+    margin-top: 10px;
+}

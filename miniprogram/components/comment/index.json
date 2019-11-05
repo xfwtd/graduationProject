@@ -1,0 +1,6 @@
+{
+	"component": true,
+	"usingComponents": {
+		"rate-cmp":"/components/rate/index"
+	}
+}

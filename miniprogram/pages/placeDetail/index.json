@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "comment-cmp":"/components/comment/index",
+	"scrollNav-cmp":"/components/scrollNav/index"
+  },
+  "navigationStyle": "default",
+  "navigationBarTitleText": ""
+   
+}

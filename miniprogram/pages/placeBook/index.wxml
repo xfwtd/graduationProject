@@ -1,0 +1,88 @@
+<!--pages/placeBook/index.wxml-->
+<topbar-cmp placeName="店名" bind:topbarHeight="topbar"></topbar-cmp>
+<view>
+    <!-- 时间选项卡 -->
+    <scroll-view scroll-x="true" class="bg-white" style="top:{{topbarHeight}}px">
+        <view class="flex-a">
+            <view class=" daybox {{index==TabCur?'text-orange cur':''}}" wx:for="{{siteData}}" wx:key
+                bindtap="tabSelect" data-id="{{index}}">
+                <view class="">
+                    {{item.time}}
+                </view>
+                <view class="small">
+                    1月17
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+
+    <!-- 场地地图 -->
+    <view class="wrap" style="padding-top:{{60+topbarHeight}}px">
+        <scroll-view class="" scroll-x="true" style="white-space: nowrap">
+            <view class="site">
+                <view class="site-name-box">
+                    <block wx:for="{{siteData}}" wx:key>
+                        <view class="site-name">
+                            第一场
+                        </view>
+                    </block>
+                </view>
+
+                <view class="scroll-time">
+                    <block wx:for="{{11}}">
+                        <view class="site-time">
+                            10:00
+                        </view>
+                    </block>
+                </view>
+                <!-- 主地图 -->
+                <block wx:for="{{siteData}}" wx:key wx:for-index="day">
+                    <view class="seat-map" hidden="{{day==TabCur?false:true}}">
+                        <!-- 循环行-->
+                        <view wx:for="{{item.seat}}" wx:key wx:for-item="itm" wx:for-index="row">
+                            <!-- 循环列 -->
+                            <block wx:for="{{itm}}" wx:key wx:for-item="i" wx:for-index="col">
+                                <view class="seat off" wx:if="{{i==0}}">
+                                </view>
+                                <view class="seat" wx:if="{{i==1}}" catchtap="selectSite" data-row="{{row}}"
+                                    data-col="{{col}}" data-day="{{day}}">
+                                    ￥36
+                                </view>
+                                <view class="seat on" wx:if="{{i==2}}" catchtap="cancelSite" data-row="{{row}}"
+                                    data-col="{{col}}" data-day="{{day}}">
+                                    ￥36
+                                </view>
+                            </block>
+
+                        </view>
+
+                    </view>
+
+                </block>
+
+            </view>
+        </scroll-view>
+    </view>
+    <view class="instructions">
+        <view class="type-block">
+            <view class="block act"></view>
+            <view class="text">已选</view>
+        </view>
+        <view class="type-block">
+            <view class="block"></view>
+            <view class="text">可选</view>
+        </view>
+        <view class="type-block">
+            <view class="block ban"></view>
+            <view class="text">不可选</view>
+        </view>
+    </view>
+    <view class="book-bottom">
+        <view class="price">
+            <view class="small">合计:</view>￥{{total}}
+        </view>
+        <navigator class="btn" target="" url="/pages/orderDetail/index">
+            确定预订
+        </navigator>
+    </view>
+</view>

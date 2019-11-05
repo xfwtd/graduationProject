@@ -1,0 +1,61 @@
+<div class="index">
+  <div class="select-pro">
+    这里切换项目：
+    <el-dropdown @command="handleCommand">
+      <span class="el-dropdown-link">
+        下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+      </span>
+      <el-dropdown-menu slot="dropdown">
+        <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
+      </el-dropdown-menu>
+    </el-dropdown>
+  </div>
+  <div class="main-interface">
+    <el-row>
+      <!-- 展示 -->
+      <el-col :span='18' class="time-order">
+        <el-tabs type="border-card" @tab-click="handleClick">
+          <el-tab-pane v-for="(item, index) in orderData" :key="item.month">
+            <span slot="label" style="text-align:center"> <span class="day">{{item.day}}</span><span
+                class="month">{{item.month}}</span></span>
+            <div class="order-box">
+              <div class="time-box">
+                <div class="order-item" v-for="(item, i ) in businessHours">{{item}}</div>
+              </div>
+              <div class="site-box">
+                <div v-for="(itx,inx) in item.order" :key="itx.siteName">
+                  <div class="order-item site-y">{{itx.siteName}}</div>
+                  <div class="order-item " v-for="(it, ix) in itx.priceData" :key=it.startTime>
+                    <div class="item-content dis" v-if="it.state==0">
+                      不可选
+                    </div>
+                    <div class="item-content" v-if="it.state==1">
+          
+                      {{it.price}}￥
+                    </div>
+                    <div class="item-content active" v-if="it.state==2">
+                        已定
+                      {{it.price}}
+                    </div>
+                    <div class="item-content wait" v-if="it.state==3">
+                        待支付
+                    </div>
+                  </div>
+                  </template>
+
+                </div>
+              </div>
+            </div>
+          </el-tab-pane>
+
+        </el-tabs>
+
+
+      </el-col>
+      <!--操作-->
+      <el-col :span="6" class="opt-order">
+        我是计算
+      </el-col>
+    </el-row>
+  </div>
+</div>

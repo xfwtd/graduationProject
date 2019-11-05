@@ -1,0 +1,10 @@
+<!--components/scrollNav/index.wxml-->
+<view>
+    <scroll-view scroll-x class="bg-white nav">
+        <view class="flex text-center">
+            <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{itemName}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+              {{item.sessionName}}
+            </view>
+          </view>
+    </scroll-view>
+</view>
