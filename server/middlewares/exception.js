@@ -1,13 +1,20 @@
 const {HttpException} = require('../core/http-exception')
 
-const catchError = async (ctx, next) => {
+const catchError = async (ctx, next)=>{
     try {
         await next()
     } catch (error) {
-        if(global.config.environment === 'dev') {
+        // 开发环境
+        // 生产环境
+        // 开发环境 不是HttpException
+        const isHttpException = error instanceof HttpException
+        const isDev = global.config.environment === 'dev'
+        
+        if(isDev && !isHttpException){
             throw error
         }
-        if(error instanceof HttpException) {
+        
+        if(isHttpException){
             ctx.body = {
                 msg:error.msg,
                 error_code:error.errorCode,
@@ -17,8 +24,8 @@ const catchError = async (ctx, next) => {
         }
         else{
             ctx.body = {
-                msg:'这是个未知异常',
-                error_code:999,
+                msg: 'we made a mistake O(∩_∩)O~~',
+                error_code: 999,
                 request:`${ctx.method} ${ctx.path}`
             }
             ctx.status = 500
