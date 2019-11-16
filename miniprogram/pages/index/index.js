@@ -1,4 +1,6 @@
 // pages/index/index.js
+import {HTTP} from '../../util/http'
+var http = new HTTP()
 var app = getApp()
 Page({
 
@@ -88,6 +90,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.login({
+      success(res) {
+        if(res.code) {
+          http.request({
+            url:'/token',
+            method:'POST',
+            data:{
+              account:res.code,
+              type:100
+            },
+            success:(res)=> {
+              wx.setStorage({
+                key:"token",
+                data:res
+              })
+            }
+          })
+        }
+      }
+    })
     //获取当前位置
 	  app.getLocation({
       success: (res)=> {
@@ -98,6 +120,9 @@ Page({
       })
     }
     });
+    
+    
+
   },
 
   /**

@@ -6,9 +6,8 @@
 		"pages/placeDetail/index",
 		"pages/placeBook/index",
 		"pages/orderDetail/index",
+		"pages/me/index",
 		"pages/location/index"
-	
-		
 	],
 	"window": {
 		"navigationBarTitleText": "场地预订",
@@ -22,18 +21,20 @@
 		"list": [
 			{
 				"iconPath": "/images/book.png",
-				"selectedIconPath": "/images/book.png",
+				"selectedIconPath": "/images/book-fill.png",
 				"pagePath": "pages/index/index",
 				"text": "预订"
 			},
 			{
 				"iconPath": "/images/match.png",
-				"selectedIconPath": "/images/match.png",
+				"selectedIconPath": "/images/match-fill.png",
 				"pagePath": "pages/index/index",
 				"text": "赛事"
 			},
 			{
-				"pagePath": "pages/index/index",
+				"iconPath": "/images/account.png",
+				"selectedIconPath": "/images/account-fill.png",
+				"pagePath": "pages/me/index",
 				"text": "我的"
 			}
 		]
